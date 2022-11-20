@@ -1,0 +1,64 @@
+ArmorSets:
+  inventory:
+    title: "&e&lArmor Sets"
+    size: 9
+    items:
+      0:
+        item: "DIAMOND_HELMET"
+        name: "&8&l» &c&lDemon Set &8&l«"
+        lore:
+          - ""
+          - "&7&oThe demonic armor set ready"
+          - "&7&oand waiting for the demons"
+          - "&7&oof the realm."
+          - ""
+          - "&C&lEffects:"
+          - "&f● Permanent Speed II effect."
+          - "&f● Permanent Absorption II effect."
+          - "&f● Permanent HealthBoost III effect."
+        slot: 0
+DemonSet:
+  inventory:
+    title: "&c&lDemon Set"
+    size: 9
+    items:
+      0:
+        item: "DIAMOND_HELMET"
+        name: "&f&l** &c&lDEMON HELMET &f&l**"
+        lore:
+          - ""
+          - "&7&oThe demonic armor set ready"
+          - "to be brought into battle"
+          - ""
+          - "&c&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 0
+      1:
+        item: "DIAMOND_CHESTPLATE"
+        name: "&f&l** &c&lDEMON CHESTPLATE &f&l**"
+        lore:
+          - ""
+          - "&7&oThe demonic armor set ready"
+          - "to be brought into battle"
+          - ""
+          - "&c&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 1
+      2:
+        item: "DIAMOND_LEGGINGS"
+        name: "&f&l** &c&lDEMON LEGGINGS &f&l**"
+        lore:
+          - ""
+          - "&7&oThe demonic armor set ready"
+          - "to be brought into battle"
+          - ""
+          - "&c&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 2
+      3:
+        item: "DIAMOND_BOOTS"
+        name: "&f&l** &c&lDEMON BOOTS &f&l**"
+        lore:
+          - ""
+          - "&7&oThe demonic armor set ready"
+          - "to be brought into battle"
+          - ""
+          - "&c&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 3

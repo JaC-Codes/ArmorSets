@@ -1,0 +1,9 @@
+name: ArmorSets
+version: 0.1
+main: net.jack.armorsets.ArmorSets
+api-version: 1.13
+commands:
+  adminas:
+    description: command for admins
+  armorsets:
+    description: open gui

@@ -1,0 +1,9 @@
+net\jack\armorsets\ArmorSets.class
+net\jack\armorsets\commandhandler\AdminCommand.class
+net\jack\armorsets\guiview\InventoryHandler$1.class
+net\jack\armorsets\itembuilder\Demon.class
+net\jack\armorsets\guiview\InventoryHandler.class
+net\jack\armorsets\itembuilder\ItemBuild.class
+net\jack\armorsets\commandhandler\PlayerCommand.class
+net\jack\armorsets\guiview\GUICreator.class
+net\jack\armorsets\utils\CC.class
