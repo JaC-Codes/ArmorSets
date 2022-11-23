@@ -17,10 +17,24 @@ ArmorSets:
           - "&f● Permanent Absorption II effect."
           - "&f● Permanent HealthBoost III effect."
         slot: 0
+      1:
+        item: "FISHING_ROD"
+        name: "&8&l» &b&lWarrior Set &8&l«"
+        warrior-open: "&8&l» &b&lWarrior Set &8&l«"
+        lore:
+          - ""
+          - "&7&oA true warriors set"
+          - "&7&obe the hero!"
+          - ""
+          - "&b&lEffects:"
+          - "&f● Permanent  Speed III effect."
+          - "&f● Permanent  Resistance II effect."
+        slot: 1
 DemonSet:
   inventory:
     title: "&c&lDemon Set"
     size: 9
+    open: "&8&l» &c&lDemon Set &8&l«"
     items:
       0:
         item: "DIAMOND_HELMET"
@@ -28,37 +42,109 @@ DemonSet:
         lore:
           - ""
           - "&7&oThe demonic armor set ready"
-          - "to be brought into battle"
+          - "&7&oto be brought into battle"
           - ""
           - "&c&lAll pieces must be worn to &a&lACTIVATE"
         slot: 0
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
       1:
         item: "DIAMOND_CHESTPLATE"
         name: "&f&l** &c&lDEMON CHESTPLATE &f&l**"
         lore:
           - ""
           - "&7&oThe demonic armor set ready"
-          - "to be brought into battle"
+          - "&7&oto be brought into battle"
           - ""
           - "&c&lAll pieces must be worn to &a&lACTIVATE"
         slot: 1
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
       2:
         item: "DIAMOND_LEGGINGS"
         name: "&f&l** &c&lDEMON LEGGINGS &f&l**"
         lore:
           - ""
           - "&7&oThe demonic armor set ready"
-          - "to be brought into battle"
+          - "&7&oto be brought into battle"
           - ""
           - "&c&lAll pieces must be worn to &a&lACTIVATE"
         slot: 2
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
       3:
         item: "DIAMOND_BOOTS"
         name: "&f&l** &c&lDEMON BOOTS &f&l**"
         lore:
           - ""
           - "&7&oThe demonic armor set ready"
-          - "to be brought into battle"
+          - "&7&oto be brought into battle"
           - ""
           - "&c&lAll pieces must be worn to &a&lACTIVATE"
         slot: 3
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
+          - "DEPTH_STRIDER:5"
+WarriorSet:
+  inventory:
+    title: "&b&lWarrior Set"
+    size: 9
+    open: "&8&l» &b&lWarrior Set &8&l«"
+    items:
+      0:
+        item: "DIAMOND_HELMET"
+        name: "&f&l** &b&lWARRIOR HELMET &f&l**"
+        lore:
+          - ""
+          - "&7&oA true warriors armor set"
+          - "&7&ofor those who like to be a hero"
+          - ""
+          - "&b&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 0
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
+      1:
+        item: "DIAMOND_CHESTPLATE"
+        name: "&f&l** &b&lWARRIOR CHESTPLATE &f&l**"
+        lore:
+          - ""
+          - "&7&oA true warriors armor set"
+          - "&7&ofor those who like to be a hero"
+          - ""
+          - "&b&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 1
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
+      2:
+        item: "DIAMOND_LEGGINGS"
+        name: "&f&l** &b&lWARRIOR LEGGINGS &f&l**"
+        lore:
+          - ""
+          - "&7&oA true warriors armor set"
+          - "&7&ofor those who like to be a hero"
+          - ""
+          - "&b&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 2
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
+      3:
+        item: "DIAMOND_BOOTS"
+        name: "&f&l** &b&lWARRIOR BOOTS &f&l**"
+        lore:
+          - ""
+          - "&7&oA true warriors armor set"
+          - "&7&ofor those who like to be a hero"
+          - ""
+          - "&b&lAll pieces must be worn to &a&lACTIVATE"
+        slot: 3
+        enchants:
+          - "PROTECTION_ENVIRONMENTAL:6"
+          - "DURABILITY:5"
+          - "DEPTH_STRIDER:5"
