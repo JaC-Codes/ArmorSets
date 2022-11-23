@@ -30,20 +30,24 @@ public class InventoryHandler implements Listener {
             event.setCancelled(true);
         }
         if (event.getCurrentItem() == null || event.getCurrentItem().getItemMeta() == null) return;
-        for (final String i : (Objects.requireNonNull(this.armorSets.getConfig().getConfigurationSection("ArmorSets.inventory.items")).getKeys(false))) {
-            if (event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(CC.translate(this.armorSets.getConfig().getString
-                    ("ArmorSets.inventory.items." + i + ".name")))) {
-                player.closeInventory();
-                this.guiCreator.openDemonInspect(player);
-            }
+        if (event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(CC.translate(this.armorSets.getConfig().getString
+                ("DemonSet.inventory.open")))) {
+            player.closeInventory();
+            this.guiCreator.openDemonInspect(player);
+        } else if (event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(CC.translate(this.armorSets.getConfig().getString
+                ("WarriorSet.inventory.open")))) {
+            player.closeInventory();
+            this.guiCreator.openWarriorInspect(player);
         }
     }
+
 
     @EventHandler
     public void mainInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
         if (event.getView().getTitle().equalsIgnoreCase(CC.translate(this.armorSets.getConfig()
-                .getString("DemonSet.inventory.title")))) {
+                .getString("DemonSet.inventory.title"))) || event.getView().getTitle().equalsIgnoreCase(CC.translate(this.armorSets.getConfig()
+                .getString("WarriorSet.inventory.title")))) {
             event.setCancelled(true);
         }
     }
@@ -52,8 +56,9 @@ public class InventoryHandler implements Listener {
     public void onInventoryClose(InventoryCloseEvent event) {
         Player player = (Player) event.getPlayer();
         if (event.getView().getTitle().equalsIgnoreCase(CC.translate(this.armorSets.getConfig()
-                .getString("DemonSet.inventory.title")))) {
-            new BukkitRunnable(){
+                .getString("DemonSet.inventory.title"))) || event.getView().getTitle().equalsIgnoreCase(CC.translate(this.armorSets.getConfig()
+                .getString("WarriorSet.inventory.title")))) {
+            new BukkitRunnable() {
 
                 @Override
                 public void run() {
