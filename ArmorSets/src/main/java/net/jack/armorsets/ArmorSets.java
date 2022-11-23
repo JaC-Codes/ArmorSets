@@ -4,6 +4,7 @@ import net.jack.armorsets.commandhandler.AdminCommand;
 import net.jack.armorsets.commandhandler.PlayerCommand;
 import net.jack.armorsets.guiview.InventoryHandler;
 import net.jack.armorsets.itembuilder.Demon;
+import net.jack.armorsets.itembuilder.Warrior;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
@@ -62,7 +63,7 @@ public class ArmorSets extends JavaPlugin {
         saveDefaultConfig();
     }
 
-    public static ArmorSets getInstance () {
+    public static ArmorSets getInstance() {
         return instance;
     }
 
@@ -70,14 +71,18 @@ public class ArmorSets extends JavaPlugin {
         Bukkit.getScheduler().runTaskTimer(this, () -> {
             for (Player playercheck : Bukkit.getOnlinePlayers()) {
                 if (Arrays.equals(playercheck.getInventory().getArmorContents(), Demon.getDemon())) {
-                    Demon.DEMON.add(playercheck.getUniqueId());
                     Demon.effectGrant(playercheck);
-                } else if (!Arrays.equals(playercheck.getInventory().getArmorContents(), Demon.getDemon())) {
-                    Demon.DEMON.remove(playercheck.getUniqueId());
+                } else {
                     Demon.removeEffect(playercheck);
                 }
+                if (Arrays.equals(playercheck.getInventory().getArmorContents(), Warrior.getWarrior())) {
+                    Warrior.effectGrant(playercheck);
+                } else {
+                    Warrior.removeEffect(playercheck);
+                }
             }
-        }, 10, 20);
+
+        }, 20, 20);
     }
 }
 
