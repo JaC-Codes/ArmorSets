@@ -72,13 +72,8 @@ public class ArmorSets extends JavaPlugin {
             for (Player playercheck : Bukkit.getOnlinePlayers()) {
                 if (Arrays.equals(playercheck.getInventory().getArmorContents(), Demon.getDemon())) {
                     Demon.effectGrant(playercheck);
-                } else {
-                    Demon.removeEffect(playercheck);
-                }
-                if (Arrays.equals(playercheck.getInventory().getArmorContents(), Warrior.getWarrior())) {
+                } else if (Arrays.equals(playercheck.getInventory().getArmorContents(), Warrior.getWarrior())) {
                     Warrior.effectGrant(playercheck);
-                } else {
-                    Warrior.removeEffect(playercheck);
                 }
             }
 
