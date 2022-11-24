@@ -53,16 +53,10 @@ public class Warrior {
     }
 
     public static void effectGrant(Player player) {
-        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000, 2));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000000, 2));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 2));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100, 2));
     }
 
-    public static void removeEffect(Player player) {
-        for (PotionEffect effect : player.getActivePotionEffects()) {
-            player.removePotionEffect(effect.getType());
-            break;
-        }
-    }
 }
 
 
