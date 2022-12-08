@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class InventoryHandler implements Listener {
     public void playerClickInventory(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
         if (event.getView().getTitle().equalsIgnoreCase(CC.translate(this.armorSets.getConfig()
-                .getString("ArmorSets.inventory.title")))) {
+                .getString("ArmorSets.inventory.title"))) || event.getView().getTitle().equalsIgnoreCase("&f&lRunes")) {
             event.setCancelled(true);
         }
         if (event.getCurrentItem() == null || event.getCurrentItem().getItemMeta() == null) return;
@@ -64,7 +65,7 @@ public class InventoryHandler implements Listener {
                 public void run() {
                     guiCreator.openInventory(player);
                 }
-            }.runTaskLater(ArmorSets.getInstance(), 5L);
+            }.runTaskLater((Plugin) this, 5L);
         }
     }
 }
