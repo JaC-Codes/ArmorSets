@@ -7,17 +7,17 @@ import net.jack.armorsets.itembuilder.MythicRune;
 import net.jack.armorsets.utils.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 
 public class RunesCommand extends SubCommand {
 
     private final ArmorSets armorSets;
-
-
-    MythicRune rune = new MythicRune();
+    private final CommandManager manager;
+    private final MythicRune rune;
 
     public RunesCommand(ArmorSets armorSets) {
         this.armorSets = armorSets;
+        this.manager = armorSets.getManager();
+        this.rune = new MythicRune(armorSets);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class RunesCommand extends SubCommand {
             player.sendMessage(CC.translate("&aYou do not have permission to perform this command."));
         }
         if (args.length < 4) {
-            CommandManager.usage(player);
+            manager.usage(player);
             return;
         }
         if (args[1].equalsIgnoreCase("give")) {
@@ -39,7 +39,7 @@ public class RunesCommand extends SubCommand {
             if (target != null) {
                 if (args[3].equalsIgnoreCase("mythic")) {
                     if (args.length == 4) {
-                        CommandManager.usage(player);
+                        manager.usage(player);
                     } else {
                         int amount = Integer.parseInt(args[4]);
                         rune.giveMythicRune(player, amount);
