@@ -12,9 +12,11 @@ import org.bukkit.entity.Player;
 public class ArmorSetsCommand extends SubCommand {
 
     private final ArmorSets armorSets;
+    private final CommandManager manager;
 
-    public ArmorSetsCommand(ArmorSets armorSets) {
+    public ArmorSetsCommand(ArmorSets armorSets, CommandManager manager) {
         this.armorSets = armorSets;
+        this.manager = manager;
     }
 
     Demon demon = new Demon();
@@ -31,7 +33,7 @@ public class ArmorSetsCommand extends SubCommand {
             player.sendMessage(CC.translate("&aYou do not have permission to perform this command."));
         }
         if (args.length < 4) {
-            CommandManager.usage(player);
+            manager.usage(player);
             return;
         }
         if (args[1].equalsIgnoreCase("give")) {
